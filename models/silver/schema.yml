@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_candy_products
+    description: "Cleansed product dimension table"
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_candy_sales
+    description: "Cleansed transactional sales fact table"
+    columns:
+      - name: row_id
+        tests:
+          - unique
+          - not_null
+      - name: product_id
+        tests:
+          - not_null

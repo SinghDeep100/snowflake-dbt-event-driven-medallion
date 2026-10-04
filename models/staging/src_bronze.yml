@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: MAVEN_CANDY_ANALYTICS
+    schema: BRONZE
+    tables:
+      - name: raw_candy_sales
+      - name: raw_candy_products
+      - name: raw_candy_factories
+      - name: raw_candy_targets
+      - name: raw_us_zips
+      - name: str_raw_candy_sales
+        description: "CDC Stream tracking incremental changes on raw_candy_sales"
